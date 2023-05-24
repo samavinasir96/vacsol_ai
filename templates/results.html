@@ -1,0 +1,82 @@
+{% extends './base.html' %} {% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+    table {
+    font-family: Fira Sans Condensed;
+    border-collapse: collapse;
+    width: 80%;
+    margin-inline-start: 120px;
+    margin-top: 4%;
+  }
+  
+  td, th {
+    font-family: Fira Sans Condensed;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    font-family: Fira Sans Condensed;
+    background-color: #dddddd;
+  }
+  tbody{
+    font-family: Fira Sans Condensed;
+      margin: 100px; 
+  }
+  input{
+    margin-inline-start: 120px;
+    font-family: Fira Sans Condensed;
+  }
+  button{
+    font-family: Fira Sans Condensed;
+    display: block;
+    font-size: medium;
+    width: 75%;
+    height: 35px;
+    border: none;
+    background-color: #091E34;
+    color: #ffff;
+    align-items: center;
+    margin-inline-start: 120px;
+    margin-bottom: 2%;
+  }  
+  h3{
+    margin-inline-start: 120px;
+    font-family: Fira Sans Condensed;
+    font-size: 14px;
+    margin-bottom: 0.5%;
+  }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Protein ID</th>
+                <th>Prediction</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.Protein_ID }}</td>
+                <td>
+                    {% if result.Prediction == -1 %}
+                        Non-vaccine target
+                    {% elif result.Prediction == 1 %}
+                        Vaccine candidate
+                    {% else %}
+                        Unknown
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends './base.html' %} {% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+    h3{
+    padding-top: 2%;
+    margin-left: 6%;
+    font-family: Fira Sans Condensed;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+}
+p{
+    font-family: Fira Sans Condensed;
+    font-size: small;
+    font-weight: 550;
+}
+textarea{
+    margin-left: 5%;
+    text-align: justify;
+}
+h2{
+    margin-left: 150px;
+}
+form {
+    margin-left: 1%;
+  }  
+
+select{
+    width: 18%;
+    margin-left: 42%;
+}
+
+label{
+    font-size: 14px;
+}
+
+button{
+    display:inline-block;
+    justify-content:center;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    background-color: #091E34;
+    color: #ffff;
+ }
+ mat-progress-bar{
+  margin: 0 auto;
+  margin-bottom: 20px;
+ }
+</style>
+<body>
+    <h3>Enter your Protein sequences OR Select your fasta file *</h3>
+    <form method="post" enctype="multipart/form-data" id="upload-form">
+        {% csrf_token %}
+        <textarea name="sequence" rows="8" cols="135"></textarea><br><br>
+
+        <label style="margin-left: 5%;" for="file">File:</label>
+        <input type="file" name="file" id="file-input"><br><br>
+
+        <input style="width: 80%; height: 35px; background-color:#091E34; color: #ffff; margin-left: 5%;" type="submit" value="Upload", id="upload-button">
+    </form>
+
+    <progress style="margin-left: 5%; width: 80%; height: 8%;" id="progress-bar" value="0" max="100"></progress>
+    
+    <script>
+        // Progress bar element
+        var progressBar = document.getElementById("progress-bar");
+    
+        // File input element
+        var fileInput = document.getElementById("file-input");
+    
+        // Upload button element
+        var uploadButton = document.getElementById("upload-button");
+    
+        // Event listener for form submission
+        document.getElementById("upload-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            var formData = new FormData(); // Create a new FormData object
+            formData.append("csrfmiddlewaretoken", '{{ csrf_token }}'); // Add the CSRF token to the form data
+            formData.append("sequence", document.getElementsByName("sequence")[0].value); // Add sequence value to the form data
+            formData.append("file", fileInput.files[0]); // Add file to the form data
+    
+            var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+            xhr.open("POST", "{% url 'upload' %}", true); // Specify the URL and request method
+    
+            // Progress event listener
+            xhr.upload.onprogress = function(event) {
+                if (event.lengthComputable) {
+                    var progress = (event.loaded / event.total) * 100; // Calculate progress percentage
+                    progressBar.value = progress; // Update progress bar value
+                }
+            };
+    
+            // Load event listener
+            xhr.onload = function() {
+                progressBar.value = 100; // Set progress bar to 100% when upload is completed
+    
+                if (xhr.status === 200) {
+                    window.location.href = "{% url 'results' %}"; // Redirect to results page
+                } else {
+                    console.log("Error analyzing sequence: " + xhr.responseText);
+                }
+            };
+    
+            xhr.send(formData); // Send the form data
+        });
+    
+        // Initialize progress bar
+        progressBar.value = 0;
+    
+        function updateProgressBar(progress) {
+            progressBar.value = progress;
+        }
+    </script>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,83 @@
+
+{% load static %}
+
+<style>
+  header{
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+header h3 {
+    font-family: Fira Sans Condensed;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+p{
+    justify-content: center;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+li{
+    float: none;
+    text-align: center;
+    font-family: Fira Sans Condensed;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    padding-top: 5px;
+    justify-content: center;
+    padding-inline-start: 60px;
+    position: relative;
+    transition: 0.5s;
+}
+li a:after{
+    position: absolute;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+li a:hover{
+   color: #033A3D;
+}
+li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+</style>
+
+<header style="background-color: #091E34;" >
+    <p style="padding-bottom: 1px;"><img src="{% static 'vacsolai_logo_white.png' %}" alt="" width="170px" height="45px"></p>
+    <h3 style="font-family: Fira Sans Condensed; font-weight: 500;">VacSol-AI; An artificial intelligence framework based on reverse vaccinology; for prediction of Potential bacterial vaccine candidates (BVCs)</h3>
+  </header>
+  <br />
+  <ul>
+    <li><a href="default.asp">Home</a></li>
+    <li><a href="Tutorials.asp">Tutorials</a></li>
+    <li><a href="FAQs.asp">FAQs</a></li>
+    <li><a href="Contact Us.asp">Contact Us</a></li>
+    <li><a href="Login/Register.asp">Login/Register</a></li>
+  </ul>
+{% block content %} {% endblock %}

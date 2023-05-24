@@ -1,0 +1,40 @@
+{
+  "INFO": {
+    "failedjobs": 0,
+    "size": 1
+  },
+  "CSV_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\prediction_results.txt",
+  "MATURE_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\processed_entries.fasta",
+  "GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output.gff3",
+  "ZIP_FILE": "",
+  "SEQUENCES": {
+    "tr|A0A013U0F5|A0A013U0F5_ACIBA Thioredoxin reductase OS=Acinetobacter baumannii 573719 OX=1310759 GN=J658_1759 PE=3 SV=1": {
+      "Name": "tr|A0A013U0F5|A0A013U0F5_ACIBA Thioredoxin reductase OS=Acinetobacter baumannii 573719 OX=1310759 GN=J658_1759 PE=3 SV=1",
+      "Plot_eps": "",
+      "Plot_png": "",
+      "Plot_txt": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output_tr_A0A013U0F5_A0A013U0F5_ACIBA_Thioredoxin_reductase_OS_Acinetobacter_baumannii_573719_OX_1310759_GN_J658_1759_PE_3_SV_1_plot.txt",
+      "Prediction": "Other",
+      "Likelihood": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Protein_types": [
+        "Other",
+        "Signal Peptide (Sec/SPI)",
+        "Lipoprotein signal peptide (Sec/SPII)",
+        "TAT signal peptide (Tat/SPI)",
+        "TAT Lipoprotein signal peptide (Tat/SPII)",
+        "Pilin-like signal peptide (Sec/SPIII)"
+      ],
+      "CS_pos": ""
+    }
+  },
+  "FORMAT": "txt",
+  "ORG": "other",
+  "MODE": "fast",
+  "REGION_GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\region_output.gff3"
+}

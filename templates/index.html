@@ -1,0 +1,66 @@
+{% extends './base.html' %} {% block content %}{% load static %}
+<style>
+    a{
+    padding-top: 2%;
+    margin: 0;
+    margin-left: 40%;
+    font-family: Fira Sans Condensed;
+    font-size: medium;
+    font-weight: 600;
+    text-align: justify;
+    color: rgb(0, 131, 225);
+}
+
+h3{
+    padding-top: 2%;
+    margin: 0;
+    font-family: Fira Sans Condensed;
+    font-size: medium;
+    font-weight: 600;
+    text-align: justify;
+}
+p{
+    font-family: Fira Sans Condensed;
+    font-size: small;
+    font-weight: 550;
+    justify-content: center;   
+}
+
+a{
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+img{
+    margin-left: 42%;
+}
+
+button{
+    display: block;
+    font-size: medium;
+    width: 75%;
+    height: 35px;
+    border: none;
+    background-color: #091E34;
+    color: #ffff;
+    align-items: center;
+    margin-left: 150px;
+  }
+</style>
+<br />
+<h3 style="text-align: center;"> Welcome to VacSol-AI!</h3>
+<p style="text-align: center;">VacSol-AI is ai framework for predictiong and analyzing vaccine targets using the concept of reverse vaccinology.</p>
+<p style="text-align: center;">ML based algorithms are employed in real time to find promising candidates in this program.</p>
+<br />
+<br />
+<base href="/">
+<p style="padding-bottom: 1px;"><img src="{% static 'eskape.png' %}" alt="" width="180px" height="50px"></p>
+<a style="margin-left: 41%;" href="{% url 'upload' %}">Enter site for ESKAPE pathogens</a>
+<br />
+<br />
+<br />
+<p style="padding-bottom: 1px;"><img src="{% static 'bac.png' %}" alt="" width="180px" height="50px"></p>
+<a routerLink="/bac-sequence">Enter VacSol-AI for Bacterial pathogens</a>
+<br />
+
+{% endblock %}
