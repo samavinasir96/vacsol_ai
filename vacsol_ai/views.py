@@ -1,4 +1,3 @@
-import json
 import pickle
 import iedb
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
@@ -21,15 +20,15 @@ import pickle
 import pandas as pd
 import os
 import sys
-from celery import shared_task
-from celery_progress.backend import ProgressRecorder
+
 
 @csrf_exempt
 def home(request):
     return render (request, 'index.html')
 
 def progress_callback(progress):
-    print(f"progress_callback({progress})")
+    sys.stdout.write('\rProgress: {}%'.format(progress))
+    sys.stdout.flush()
 
 def calculate_features(file_path, progress_callback):
     total_steps = 10
@@ -54,6 +53,7 @@ def calculate_features(file_path, progress_callback):
             df_ID = pd.DataFrame(ID_list, columns=['ID'])
 
             # Send POST request to MHC class I peptide binding prediction tool:
+            completed_steps += 1
             progress_callback(int((completed_steps / total_steps) * 100))
             mhci_res1 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*01:01", length="9")
             mhci_res2 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*02:01", length="9")
@@ -69,17 +69,16 @@ def calculate_features(file_path, progress_callback):
             
             # Send POST request to B-cell epitope prediction tool:
             bcell_res = iedb.query_bcell_epitope(method="Bepipred", sequence= sequence1, window_size=9)
-            completed_steps += 1
 
             # Send POST request to surface probability prediction tool:
+            completed_steps += 1
             progress_callback(int((completed_steps / total_steps) * 100))
             sprob_res = iedb.query_bcell_epitope(method="Emini", sequence= sequence1, window_size=9)
-            completed_steps += 1
 
             # Send POST request to antigenicity prediction tool:
+            completed_steps += 1
             progress_callback(int((completed_steps / total_steps) * 100))
             antigenicity_1 = iedb.query_bcell_epitope(method="Kolaskar-Tongaonkar", sequence= sequence1, window_size=9)
-            completed_steps += 1
 
             # Getting means - mhci
             progress_callback(int((completed_steps / total_steps) * 100))
@@ -120,6 +119,7 @@ def calculate_features(file_path, progress_callback):
             completed_steps += 1
             
             #Analysis of Physiochemical Features:
+            completed_steps += 1
             progress_callback(int((completed_steps / total_steps) * 100))
             X = ProteinAnalysis(sequence1)
             #by protoparam
@@ -159,9 +159,9 @@ def calculate_features(file_path, progress_callback):
             df_all = [df1, df2, df3, df4]
             con1 = pd.concat(df_all, axis="columns")
             MERGED_DATAFRAMES.append(con1)
-            completed_steps += 1
 
             #Raw Results files
+            completed_steps += 1
             progress_callback(int((completed_steps / total_steps) * 100))
             """
             #i: Physiochemical csv
@@ -218,6 +218,7 @@ def calculate_features(file_path, progress_callback):
     os.system(f'signalp6 --fastafile {fasta_file_path} --organism other --output_dir {output_dir_path}')
 
     #read signalp results:
+    completed_steps += 1
     progress_callback(int((completed_steps / total_steps) * 100))
     
     sp_table_path = os.path.join(csv_folder_path, "prediction_results.txt")
@@ -235,8 +236,8 @@ def calculate_features(file_path, progress_callback):
     TATLIPO = df['TATLIPO(Sec/SPII)'].values
     PILIN = df['PILIN(Sec/SPIII)'].values
     OTHER = df['OTHER'].values
-    completed_steps += 1
     
+    completed_steps += 1
     progress_callback(int((completed_steps / total_steps) * 100))
     add_scores = pd.read_csv(final_csv_path)
     add_scores["signal_peptide_SP"] = SP
@@ -271,8 +272,8 @@ def calculate_features(file_path, progress_callback):
     # concatenate the script directory with the filename to create the full path of the CSV file
     scaled_csv_path = os.path.join(script_dir, "Rescaled_CSV.csv")
     final_df.to_csv(scaled_csv_path, index=False)
-    progress_callback(int((completed_steps / total_steps) * 100))
     completed_steps += 1
+    progress_callback(int((completed_steps / total_steps) * 100))
 
 def upload_sequence(request):
     if request.method == "POST":
@@ -288,6 +289,7 @@ def upload_sequence(request):
                 with open(file_path, "w") as f:
                     f.write(sequence)
             elif file:
+                script_dir = os.path.dirname(os.path.abspath(__file__))
                 file_path = os.path.join(script_dir, "sequences.fasta")
                 with open(file_path, "wb") as f:
                     for chunk in file.chunks():
