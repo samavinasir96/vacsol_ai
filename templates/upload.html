@@ -59,6 +59,16 @@ button{
     <h3>Enter your Protein sequences OR Select your fasta file *</h3>
     <form method="post" enctype="multipart/form-data" id="upload-form">
         {% csrf_token %}
+        <label style="margin-left: 5%;" for="specie_select">Select the pathogen:</label>
+        <select name="category" id="category">
+          <option value="option1">Enterococcus faecium</option>
+          <option value="option2">Staphylococcus aureus</option>
+          <option value="option3">Klebsiella pneumoniae</option>
+          <option value="option3">Acinetobacter baumannii</option>
+          <option value="option3">Pseudomonas aeruginosa</option>
+          <option value="option3">Enterobacter spp</option>
+        </select><br><br>
+
         <textarea name="sequence" rows="8" cols="135"></textarea><br><br>
 
         <label style="margin-left: 5%;" for="file">File:</label>

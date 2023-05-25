@@ -31,9 +31,6 @@ a{
     text-decoration-line: underline;
 }
 
-img{
-    margin-left: 42%;
-}
 
 button{
     display: block;
@@ -54,12 +51,12 @@ button{
 <br />
 <br />
 <base href="/">
-<p style="padding-bottom: 1px;"><img src="{% static 'eskape.png' %}" alt="" width="180px" height="50px"></p>
+<p style="padding-bottom: 1px; margin-left: 42%;"><img src="{% static 'eskape.png' %}" alt="" width="180px" height="50px"></p>
 <a style="margin-left: 41%;" href="{% url 'upload' %}">Enter site for ESKAPE pathogens</a>
 <br />
 <br />
 <br />
-<p style="padding-bottom: 1px;"><img src="{% static 'bac.png' %}" alt="" width="180px" height="50px"></p>
+<p style="padding-bottom: 1px; margin-left: 42%;"><img src="{% static 'bac.png' %}" alt="" width="180px" height="50px"></p>
 <a routerLink="/bac-sequence">Enter VacSol-AI for Bacterial pathogens</a>
 <br />
 
