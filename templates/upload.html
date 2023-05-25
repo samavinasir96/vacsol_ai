@@ -54,6 +54,7 @@ button{
   margin-bottom: 20px;
  }
 </style>
+
 <body>
     <h3>Enter your Protein sequences OR Select your fasta file *</h3>
     <form method="post" enctype="multipart/form-data" id="upload-form">
@@ -67,7 +68,6 @@ button{
     </form>
 
     <progress style="margin-left: 5%; width: 80%; height: 8%;" id="progress-bar" value="0" max="100"></progress>
-    
     <script>
         // Progress bar element
         var progressBar = document.getElementById("progress-bar");
@@ -119,6 +119,7 @@ button{
             progressBar.value = progress;
         }
     </script>
+
     </body>
 </html>
 {% endblock %}

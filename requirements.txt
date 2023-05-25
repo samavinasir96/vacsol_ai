@@ -1,0 +1,13 @@
+django
+pickle
+iedb
+Bio
+PyBioMed
+pandas
+os
+fastaparser
+sklearn
+uuid
+sys
+pickle
+fileinput
