@@ -80,3 +80,9 @@
 </body>
 </html>
 {% endblock %}
+
+<form action="{% url 'complete_analysis' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Complete Analysis</button>
+</form>
+

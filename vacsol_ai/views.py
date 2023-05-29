@@ -1,4 +1,5 @@
 import pickle
+from django.conf import settings
 import iedb
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from PyBioMed.PyPretreat import PyPretreatPro
@@ -8,9 +9,7 @@ import pandas as pd
 import os
 import fastaparser
 from pandas import DataFrame
-from sklearn.datasets import load_iris
 from sklearn import preprocessing as per
-from sklearn.preprocessing import StandardScaler
 import sys    
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -26,13 +25,11 @@ import sys
 def home(request):
     return render (request, 'index.html')
 
-def progress_callback(progress):
-    sys.stdout.write('\rProgress: {}%'.format(progress))
+def progress_callback(message):
+    sys.stdout.write(message + '\n')
     sys.stdout.flush()
 
-def calculate_features(file_path, progress_callback):
-    total_steps = 10
-    completed_steps = 0
+def calculate_features(file_path, progress_callback, run_analysis=False):
     # Use os.path.abspath to get the absolute file path
     file_path = os.path.abspath(file_path)
     LIST_RESULTS_1 = []
@@ -53,8 +50,7 @@ def calculate_features(file_path, progress_callback):
             df_ID = pd.DataFrame(ID_list, columns=['ID'])
 
             # Send POST request to MHC class I peptide binding prediction tool:
-            completed_steps += 1
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Sending sequence {ID} to Epitope Analysis Predictions...")
             mhci_res1 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*01:01", length="9")
             mhci_res2 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*02:01", length="9")
             #concat mhci-res
@@ -71,17 +67,14 @@ def calculate_features(file_path, progress_callback):
             bcell_res = iedb.query_bcell_epitope(method="Bepipred", sequence= sequence1, window_size=9)
 
             # Send POST request to surface probability prediction tool:
-            completed_steps += 1
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Sending sequence {ID} to Adhesion Probability Predictions...")
             sprob_res = iedb.query_bcell_epitope(method="Emini", sequence= sequence1, window_size=9)
 
             # Send POST request to antigenicity prediction tool:
-            completed_steps += 1
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Sending sequence {ID} to Antigenicity Predictions...")
             antigenicity_1 = iedb.query_bcell_epitope(method="Kolaskar-Tongaonkar", sequence= sequence1, window_size=9)
 
             # Getting means - mhci
-            progress_callback(int((completed_steps / total_steps) * 100))
             mhci_res['score'] = pd.to_numeric(mhci_res['score'], errors='coerce')
             mhci_res['percentile_rank'] = pd.to_numeric(mhci_res['percentile_rank'], errors='coerce')
 
@@ -89,21 +82,23 @@ def calculate_features(file_path, progress_callback):
             df_rank_mhci = mhci_res["percentile_rank"].mean()
 
             # Getting means - mhcii
-            mhcii_res['adjusted_rank'] = pd.to_numeric(mhcii_res['adjusted_rank'], errors='coerce')
-            mhcii_res['comblib_score'] = pd.to_numeric(mhcii_res['comblib_score'], errors='coerce')
-            mhcii_res['comblib_adjusted_rank'] = pd.to_numeric(mhcii_res['comblib_adjusted_rank'], errors='coerce')
-            mhcii_res['smm_align_ic50'] = pd.to_numeric(mhcii_res['smm_align_ic50'], errors='coerce')
-            mhcii_res['smm_align_adjusted_rank'] = pd.to_numeric(mhcii_res['smm_align_adjusted_rank'], errors='coerce')
-            mhcii_res['nn_align_ic50'] = pd.to_numeric(mhcii_res['nn_align_ic50'], errors='coerce')
-            mhcii_res['nn_align_adjusted_rank'] = pd.to_numeric(mhcii_res['nn_align_adjusted_rank'], errors='coerce')
+            mhcii_res['score'] = pd.to_numeric(mhcii_res['score'], errors='coerce')
+            mhcii_res['rank'] = pd.to_numeric(mhcii_res['rank'], errors='coerce')
+#            mhcii_res['adjusted_rank'] = pd.to_numeric(mhcii_res['adjusted_rank'], errors='coerce')
+ #           mhcii_res['comblib_score'] = pd.to_numeric(mhcii_res['comblib_score'], errors='coerce')
+  #          mhcii_res['comblib_adjusted_rank'] = pd.to_numeric(mhcii_res['comblib_adjusted_rank'], errors='coerce')
+   #         mhcii_res['smm_align_adjusted_rank'] = pd.to_numeric(mhcii_res['smm_align_adjusted_rank'], errors='coerce')
+  #          mhcii_res['nn_align_ic50'] = pd.to_numeric(mhcii_res['nn_align_ic50'], errors='coerce')
+   #         mhcii_res['nn_align_adjusted_rank'] = pd.to_numeric(mhcii_res['nn_align_adjusted_rank'], errors='coerce')
 
-            rank_mhcii = mhcii_res["adjusted_rank"].mean()
-            comblib_score_mhcii = mhcii_res['comblib_score'].mean()
-            comblib_rank_mhcii = mhcii_res["comblib_adjusted_rank"].mean()
-            smm_align_ic50_mhcii = mhcii_res["smm_align_ic50"].mean()
-            smm_align_rank_mhcii = mhcii_res["smm_align_adjusted_rank"].mean()
-            nn_align_ic50_mhcii = mhcii_res["nn_align_ic50"].mean()
-            nn_align_rank_mhcii = mhcii_res["nn_align_adjusted_rank"].mean()
+            rank_mhcii = mhcii_res["rank"].mean()
+            score_mhcii = mhcii_res["score"].mean()
+ #           comblib_score_mhcii = mhcii_res['comblib_score'].mean()
+ #           comblib_rank_mhcii = mhcii_res["comblib_adjusted_rank"].mean()
+  #          smm_align_ic50_mhcii = mhcii_res["smm_align_ic50"].mean()
+   #         smm_align_rank_mhcii = mhcii_res["smm_align_adjusted_rank"].mean()
+    #        nn_align_ic50_mhcii = mhcii_res["nn_align_ic50"].mean()
+     #       nn_align_rank_mhcii = mhcii_res["nn_align_adjusted_rank"].mean()
 
             # Getting means - bcells
             bcell_res['Score'] = pd.to_numeric(bcell_res['Score'], errors='coerce')
@@ -116,11 +111,9 @@ def calculate_features(file_path, progress_callback):
             # Getting means - antigenicity(scale1)
             antigenicity_1['Score'] = pd.to_numeric(antigenicity_1['Score'], errors='coerce')
             antigenicity_1_final = antigenicity_1["Score"].mean()
-            completed_steps += 1
             
             #Analysis of Physiochemical Features:
-            completed_steps += 1
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Sending sequence {ID} to Physicochemical Parameters Predictions...")
             X = ProteinAnalysis(sequence1)
             #by protoparam
             scale1= "%0.2f" % X.molecular_weight()
@@ -133,16 +126,15 @@ def calculate_features(file_path, progress_callback):
             aa_no= PyPretreatPro.ProteinCheck(sequence1)
             
             #Final CSV
-            header = ['Protein_ID','aa_no','molecular_weight', 'pH_charge', 'isoelectric point', 'Hydropathy_gravy', 'instability_index', 'aromaticity', 'antigenicity_1', 'b_cells_probability_score', 'mhci_probability_score', 'mhci_rank', 'mhcii_rank', 'mhcii_comblib_score', 'mhcii_comblib_rank', 'mhcii_smm_align_ic50', 'mhcii_smm_align_rank', 'mhcii_nn_align_ic50', 'mhcii_nn_align_rank', 'surface_probability']
-            data = [ID, aa_no, scale1, scale2, scale3, scale4, scale5, scale6, antigenicity_1_final, df_bcells_final, df_score_mhci, df_rank_mhci, rank_mhcii, comblib_score_mhcii, comblib_rank_mhcii, smm_align_ic50_mhcii, smm_align_rank_mhcii, nn_align_ic50_mhcii, nn_align_rank_mhcii, df_sprob_final]
+            header = ['Protein_ID','aa_no','molecular_weight', 'pH_charge', 'isoelectric point', 'Hydropathy_gravy', 'instability_index', 'aromaticity', 'antigenicity_1', 'b_cells_probability_score', 'mhci_probability_score', 'mhci_rank', 'mhcii_rank', 'mhcii_score', 'surface_probability']
+            data = [ID, aa_no, scale1, scale2, scale3, scale4, scale5, scale6, antigenicity_1_final, df_bcells_final, df_score_mhci, df_rank_mhci, rank_mhcii, score_mhcii, df_sprob_final]
             df = pd.DataFrame(data=[data], columns=header)
             
             #print(df)
             list_data.append(df)
-            completed_steps += 1
 
             #by pybiomed
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Sending sequence {ID} to caculate feature descriptors...")
             aa_no= PyPretreatPro.ProteinCheck(sequence1)
             protein_class = Pyprotein.PyProtein(sequence1)
             descriptor1 = protein_class.GetCTD()
@@ -161,8 +153,7 @@ def calculate_features(file_path, progress_callback):
             MERGED_DATAFRAMES.append(con1)
 
             #Raw Results files
-            completed_steps += 1
-            progress_callback(int((completed_steps / total_steps) * 100))
+            progress_callback(f"Creating DataSet...")
             """
             #i: Physiochemical csv
             column_names_i = ['Protein_ID','aa_no','molecular_weight', 'pH_charge', 'isoelectric point', 'Hydropathy_gravy', 'instability_index', 'aromaticity']
@@ -197,13 +188,13 @@ def calculate_features(file_path, progress_callback):
     # concatenate the script directory with the filename to create the full path of the CSV file
     script_dir = sys.path[0]
     final_csv_path = os.path.join(script_dir, "FINAL.csv")
-    completed_steps += 1
+
 
     con.to_csv(final_csv_path, index=False)
 
     #prediction of signal peptides (SignalP. version 6.0)
     # get the path of the directory where the script is located
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_dir = sys.path[0]
 
     # concatenate the script directory with the filename to create the full path of the FASTA file
     fasta_file_path = os.path.join(script_dir, "sequences.fasta")
@@ -218,8 +209,7 @@ def calculate_features(file_path, progress_callback):
     os.system(f'signalp6 --fastafile {fasta_file_path} --organism other --output_dir {output_dir_path}')
 
     #read signalp results:
-    completed_steps += 1
-    progress_callback(int((completed_steps / total_steps) * 100))
+    progress_callback(f"Sending sequence {ID} to Signal Peptide Predictions...")
     
     sp_table_path = os.path.join(csv_folder_path, "prediction_results.txt")
     df = pd.read_table(sp_table_path, sep="\t", header=None, skiprows=1)
@@ -237,8 +227,7 @@ def calculate_features(file_path, progress_callback):
     PILIN = df['PILIN(Sec/SPIII)'].values
     OTHER = df['OTHER'].values
     
-    completed_steps += 1
-    progress_callback(int((completed_steps / total_steps) * 100))
+    progress_callback(f"Creating DataSet...")
     add_scores = pd.read_csv(final_csv_path)
     add_scores["signal_peptide_SP"] = SP
     add_scores["signal_peptide_LIPO"] = LIPO
@@ -265,15 +254,13 @@ def calculate_features(file_path, progress_callback):
     rescaledData=scaler.fit_transform(rescale_df)
     rescaledData=pd.DataFrame(rescaledData,index=rescale_df.index,columns=rescale_df.columns)
     rescaledData.insert(0, 'Protein_ID', Protein_ID)
-    columns_to_keep = ['Protein_ID','aa_no', 'pH_charge', 'instability_index', 'aromaticity', 'antigenicity_1', 'b_cells_probability_score', 'mhci_probability_score', 'mhci_rank', 'mhcii_rank', 'mhcii_comblib_score', 'mhcii_comblib_rank', 'mhcii_smm_align_ic50', 'mhcii_smm_align_rank', 'mhcii_nn_align_ic50', 'mhcii_nn_align_rank', 'surface_probability', 'signal_peptide_LIPO', 'signal_peptide_TAT', 'signal_peptide_PILIN', 'index', '_SecondaryStrT13', '_PolarizabilityD1001', '_PolarizabilityD1100', '_PolarizabilityD2001', '_PolarizabilityD2100', '_PolarizabilityD3001', '_PolarizabilityD3025', '_PolarizabilityD3100', '_SolventAccessibilityD1025', '_SolventAccessibilityD1100', '_SolventAccessibilityD2100', '_SolventAccessibilityD3001', '_SolventAccessibilityD3025', '_SecondaryStrD1100', '_SecondaryStrD2025', '_SecondaryStrD2100', '_SecondaryStrD3100', '_ChargeD2100', 'GearyAuto_Polarizability7', 'GearyAuto_Polarizability9', 'GearyAuto_Polarizability11', 'GearyAuto_Polarizability15', 'GearyAuto_Polarizability17', 'GearyAuto_Polarizability19', 'GearyAuto_Polarizability25', 'GearyAuto_Polarizability27', 'GearyAuto_Polarizability29', 'GearyAuto_Steric5', 'GearyAuto_Steric7', 'GearyAuto_Steric9', 'GearyAuto_Steric11', 'GearyAuto_Steric13', 'GearyAuto_Steric15', 'GearyAuto_Steric17', 'GearyAuto_Steric19', 'GearyAuto_Steric21', 'GearyAuto_Steric23', 'GearyAuto_Steric25', 'GearyAuto_Steric27', 'GearyAuto_Steric29', 'GearyAuto_Mutability2', 'GearyAuto_Mutability25']
+    columns_to_keep = ['Protein_ID', 'aa_no', 'pH_charge', 'isoelectric point', 'Hydropathy_gravy', 'instability_index', 'aromaticity', 'antigenicity_1', 'b_cells_probability_score', 'mhci_probability_score', 'mhci_rank', 'mhcii_rank', 'mhcii_score', 'surface_probability', 'signal_peptide_SP', 'signal_peptide_LIPO', 'signal_peptide_TAT', 'signal_peptide_TATLIPO', 'signal_peptide_PILIN', 'signal_peptide_OTHER', '_SecondaryStrC2', '_PolarityC2', '_PolarizabilityT12', '_SecondaryStrT13', '_PolarizabilityD1001', '_PolarizabilityD1025', '_PolarizabilityD1100', '_PolarizabilityD2001', '_PolarizabilityD2100', '_PolarizabilityD3001', '_PolarizabilityD3025', '_PolarizabilityD3100', '_SolventAccessibilityD1025', '_SolventAccessibilityD1100', '_SolventAccessibilityD2001', '_SolventAccessibilityD2025', '_SolventAccessibilityD2100', '_SolventAccessibilityD3001', '_SolventAccessibilityD3025', '_SolventAccessibilityD3100', '_SecondaryStrD1100', '_SecondaryStrD2025', '_SecondaryStrD2100', '_SecondaryStrD3001', '_SecondaryStrD3100', '_ChargeD1001', '_ChargeD1025', '_ChargeD2100', '_ChargeD3100', '_PolarityD1025', '_PolarityD2100', '_PolarityD3100', 'GearyAuto_Hydrophobicity3', 'GearyAuto_Hydrophobicity4', 'GearyAuto_Hydrophobicity7', 'GearyAuto_Hydrophobicity9', 'GearyAuto_Hydrophobicity10', 'GearyAuto_Hydrophobicity14', 'GearyAuto_Hydrophobicity17', 'GearyAuto_Hydrophobicity24', 'GearyAuto_Hydrophobicity25', 'GearyAuto_Hydrophobicity27', 'GearyAuto_Hydrophobicity29', 'GearyAuto_Hydrophobicity30', 'GearyAuto_Polarizability1', 'GearyAuto_Polarizability3', 'GearyAuto_Polarizability5', 'GearyAuto_Polarizability7', 'GearyAuto_Polarizability9', 'GearyAuto_Polarizability10', 'GearyAuto_Polarizability11', 'GearyAuto_Polarizability12', 'GearyAuto_Polarizability14', 'GearyAuto_Polarizability15', 'GearyAuto_Polarizability17', 'GearyAuto_Polarizability19', 'GearyAuto_Polarizability20', 'GearyAuto_Polarizability21', 'GearyAuto_Polarizability22', 'GearyAuto_Polarizability23', 'GearyAuto_Polarizability25', 'GearyAuto_Polarizability26', 'GearyAuto_Polarizability27', 'GearyAuto_Polarizability29', 'GearyAuto_Steric1', 'GearyAuto_Steric2', 'GearyAuto_Steric3', 'GearyAuto_Steric5', 'GearyAuto_Steric7', 'GearyAuto_Steric9', 'GearyAuto_Steric11', 'GearyAuto_Steric13', 'GearyAuto_Steric15', 'GearyAuto_Steric16', 'GearyAuto_Steric17', 'GearyAuto_Steric19', 'GearyAuto_Steric21', 'GearyAuto_Steric23', 'GearyAuto_Steric25', 'GearyAuto_Steric26', 'GearyAuto_Steric27', 'GearyAuto_Steric29', 'GearyAuto_Steric30', 'GearyAuto_Mutability1', 'GearyAuto_Mutability2', 'GearyAuto_Mutability4', 'GearyAuto_Mutability8', 'GearyAuto_Mutability11', 'GearyAuto_Mutability16', 'GearyAuto_Mutability20', 'GearyAuto_Mutability23', 'GearyAuto_Mutability25', 'GearyAuto_Mutability27', 'GearyAuto_Mutability28', 'GearyAuto_Mutability29']
     final_df = rescaledData[columns_to_keep]
-    completed_steps += 1
 
     # concatenate the script directory with the filename to create the full path of the CSV file
     scaled_csv_path = os.path.join(script_dir, "Rescaled_CSV.csv")
     final_df.to_csv(scaled_csv_path, index=False)
-    completed_steps += 1
-    progress_callback(int((completed_steps / total_steps) * 100))
+    progress_callback(f"Features calculated successfully!")
 
 def upload_sequence(request):
     if request.method == "POST":
@@ -295,8 +282,6 @@ def upload_sequence(request):
                     for chunk in file.chunks():
                         f.write(chunk)
 
-            calculate_features(file_path, progress_callback)
-
         except Exception as e:
             print(f"Error analyzing sequence: {e}")
             return JsonResponse({"status": "Error analyzing sequence"}, status=500)
@@ -309,7 +294,7 @@ def upload_sequence(request):
 def get_results(request):
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path = os.path.join(script_dir, "MLmodel.pkl")
+        model_path = os.path.join(script_dir, "model.pkl")
 
         with open(model_path, "rb") as file:
             model = pickle.load(file)
@@ -333,4 +318,22 @@ def get_results(request):
     except Exception as e:
         print(f"Error analyzing sequence: {e}")
         return JsonResponse({"status": "Error analyzing sequence"}, status=500)
+        
+    
+def complete_analysis_view(request):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    directory_path = os.path.join(settings.MEDIA_ROOT, script_dir, "Analysis_Results")  # Set the path to your directory
+
+    # Ensure the directory path is valid
+    if os.path.exists(directory_path) and os.path.isdir(directory_path):
+        # Delete all files in the directory
+        for file_name in os.listdir(directory_path):
+            file_path = os.path.join(directory_path, file_name)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+
+        return HttpResponse("Analysis completed. All files deleted.")
+    else:
+        return HttpResponse("Invalid directory path.")
+
 

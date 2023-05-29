@@ -24,10 +24,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home,name='index'),
+    path('',views.home,name='index'),
     path('upload/',views.upload_sequence,name='upload'),
     path('results/',views.get_results,name='results'),
-    path('celery-progress/', include('celery_progress.urls')),
     #path('tutorials/', views.tutorials, name='tutorials'),
     #path('faqs/', views.faqs, name='faqs'),
     #path('contact_us/', views.contact_us, name='contact_us'),
