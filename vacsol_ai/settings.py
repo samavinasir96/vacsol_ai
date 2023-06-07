@@ -143,7 +143,8 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'E:\ASAB\VacSol-AI\ESKAPE\Real_time_server/vacsol_ai/vacsol_ai.log',
+            'script_dir' : 'os.path.dirname(os.path.abspath(__file__))',
+            'filename': 'os.path.join(script_dir, "vacsol_ai.log")',
         },
     },
     'root': {
