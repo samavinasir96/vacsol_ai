@@ -1,8 +1,7 @@
-{% extends './base.html' %} {% block content %}
+{% extends './base.html' %} {% block content %} {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-</head>
 <style>
     h3{
     padding-top: 2%;
@@ -29,7 +28,7 @@ form {
   }  
 
 select{
-    width: 18%;
+    width: 22%;
     margin-left: 42%;
 }
 
@@ -48,41 +47,106 @@ button{
     border: none;
     background-color: #091E34;
     color: #ffff;
- }
- mat-progress-bar{
-  margin: 0 auto;
-  margin-bottom: 20px;
- }
- progress{
-    background-color: orangered;
-    background-image: linear-gradient(to bottom, orange, orangered);
- }
+    margin-left: 50%;
+}
+.container {
+    display: flex;
+}
+
+.form-content {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.log-container {
+    width: 480px;
+    height: 410px;
+    margin-right: 15px;
+    margin-top: -1.5%;
+}
+
+#log-messages {
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    overflow: scroll;
+    height: 105px;
+    font-family: 'Courier New';
+    font-size: 12px;
+    font-weight: 500;
+}
 </style>
 
 <body>
     <h3>Enter your Protein sequences OR Select your fasta file *</h3>
+
     <form method="post" enctype="multipart/form-data" id="upload-form">
         {% csrf_token %}
-        <label style="margin-left: 5%;" for="specie_select">Select the pathogen:</label>
-        <select name="category" id="category">
-          <option value="option1">Enterococcus faecium</option>
-          <option value="option2">Staphylococcus aureus</option>
-          <option value="option3">Klebsiella pneumoniae</option>
-          <option value="option3">Acinetobacter baumannii</option>
-          <option value="option3">Pseudomonas aeruginosa</option>
-          <option value="option3">Enterobacter spp</option>
-        </select><br><br>
-
-        <textarea name="sequence" rows="8" cols="135"></textarea><br><br>
-
-        <label style="margin-left: 5%;" for="file">File:</label>
-        <input type="file" name="file" id="file-input"><br><br>
-
-        <input style="width: 80%; height: 35px; background-color:#091E34; color: #ffff; margin-left: 5%;" type="submit" value="upload", id="upload-button">
-    </form>
-
-    <progress style="margin-left: 5%; width: 80%; height: 8%;" id="progress-bar" value="0" max="100"></progress>
+        <div class="container">
+            <div class="form-content">
+                <label style="margin-left: 9%;" for="specie_select">Select the pathogen:</label>
+                <select name="category" id="category">
+                    <option value="option1">Enterococcus faecium</option>
+                    <option value="option2">Staphylococcus aureus</option>
+                    <option value="option3">Klebsiella pneumoniae</option>
+                    <option value="option3">Acinetobacter baumannii</option>
+                    <option value="option3">Pseudomonas aeruginosa</option>
+                    <option value="option3">Enterobacter spp</option>
+                </select><br><br>
     
-    </body>
+                <div class="textarea">
+                    <textarea name="sequence" rows="8" cols="90"></textarea><br><br>
+                </div>
+    
+                <label style="margin-left: 5%;" for="file">File:</label>
+                <input type="file" name="file" id="file-input"><br><br>
+    
+                <input type="hidden" name="rendered_output" value="{{ rendered_output|safe }}">
+    
+                <input style="width: 60%; height: 35px; background-color:#091E34; color: #ffff; margin-left: 50%;"
+                    type="submit" value="Analyze Sequence(s)" id="uploadbutton">
+            </div>
+    
+            <div class="log-container">
+                <h3>Progress Log</h3>
+                <div id="log-messages">
+                    {% for log in logs %}
+                        {{ log }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- <div class="container">
+        <div id="log-messages">
+            {% for log in logs %}
+                {{ log }}<br>
+            {% endfor %}
+        </div>    
+    </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function getLatestLogs() {
+            $.ajax({
+                url: '/get_latest_logs/',
+                type: 'GET',
+                success: function(response) {
+                    var logMessagesDiv = document.getElementById('log-messages');
+                    logMessagesDiv.innerHTML = response.logs.join('<br>');
+                    logMessagesDiv.scrollTop = logMessagesDiv.scrollHeight;
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            setInterval(getLatestLogs, 5000);
+        });
+    </script>
+</body>
 </html>
 {% endblock %}

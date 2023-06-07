@@ -1,5 +1,4 @@
 import pickle
-from django.conf import settings
 import iedb
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from PyBioMed.PyPretreat import PyPretreatPro
@@ -8,34 +7,40 @@ from PyBioMed import Pyprotein
 import pandas as pd
 import os
 import fastaparser
-from pandas import DataFrame
 from sklearn import preprocessing as per
 import sys    
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views import View
 from django.shortcuts import redirect, render
 import pickle
 import pandas as pd
 import os
 import sys
+import logging
+
 
 
 @csrf_exempt
 def home(request):
     return render (request, 'index.html')
 
-def progress_callback(message):
-    sys.stdout.write(message + '\n')
-    sys.stdout.flush()
+def get_latest_logs(request):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    log_file_path = os.path.join(script_dir, "vacsol_ai.log")
+    with open(log_file_path, 'r') as log_file:
+        latest_logs = log_file.readlines()
+    return JsonResponse({'logs': latest_logs})
 
-def calculate_features(file_path, progress_callback, run_analysis=False):
+def progress_callback(message, progress):
+    logger = logging.getLogger(__name__)
+    log_message = f"{message}"
+    logger.info(log_message, extra={'progress': progress})
+
+def calculate_features(file_path, progress_callback):
+    total_steps = 8
+    completed_steps = 0
     # Use os.path.abspath to get the absolute file path
     file_path = os.path.abspath(file_path)
-    LIST_RESULTS_1 = []
-    LIST_RESULTS_2 = []
-    LIST_RESULTS_3 = []
-    LIST_RESULTS_4 = []
     MERGED_DATAFRAMES = []
     with open(file_path) as fasta_file:
         parser = fastaparser.Reader(fasta_file)
@@ -48,9 +53,11 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
             sequence1 = seq.sequence_as_string()
             ID_list.append(ID)
             df_ID = pd.DataFrame(ID_list, columns=['ID'])
+            completed_steps += 1
+            progress=int((completed_steps / total_steps) * 100)
+            progress_callback(f"Step 1: Sequence {ID} uploaded successfully", 1)
 
             # Send POST request to MHC class I peptide binding prediction tool:
-            progress_callback(f"Sending sequence {ID} to Epitope Analysis Predictions...")
             mhci_res1 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*01:01", length="9")
             mhci_res2 = iedb.query_mhci_binding(method="recommended", sequence= sequence, allele="HLA-A*02:01", length="9")
             #concat mhci-res
@@ -65,14 +72,21 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
             
             # Send POST request to B-cell epitope prediction tool:
             bcell_res = iedb.query_bcell_epitope(method="Bepipred", sequence= sequence1, window_size=9)
+            completed_steps += 1
+            progress=int((completed_steps / total_steps) * 100)
+            progress_callback("Step 2: Epitope Analysis Completed", 2)
 
             # Send POST request to surface probability prediction tool:
-            progress_callback(f"Sending sequence {ID} to Adhesion Probability Predictions...")
             sprob_res = iedb.query_bcell_epitope(method="Emini", sequence= sequence1, window_size=9)
+            completed_steps += 1
+            progress=int((completed_steps / total_steps) * 100)
+            progress_callback("Step 3: Adhesion Probability Analysis Completed", 3)
 
             # Send POST request to antigenicity prediction tool:
-            progress_callback(f"Sending sequence {ID} to Antigenicity Predictions...")
             antigenicity_1 = iedb.query_bcell_epitope(method="Kolaskar-Tongaonkar", sequence= sequence1, window_size=9)
+            completed_steps += 1
+            progress=int((completed_steps / total_steps) * 100)
+            progress_callback("Step 4: Antigenicity Prediction Completed", 4)
 
             # Getting means - mhci
             mhci_res['score'] = pd.to_numeric(mhci_res['score'], errors='coerce')
@@ -113,7 +127,6 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
             antigenicity_1_final = antigenicity_1["Score"].mean()
             
             #Analysis of Physiochemical Features:
-            progress_callback(f"Sending sequence {ID} to Physicochemical Parameters Predictions...")
             X = ProteinAnalysis(sequence1)
             #by protoparam
             scale1= "%0.2f" % X.molecular_weight()
@@ -134,13 +147,15 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
             list_data.append(df)
 
             #by pybiomed
-            progress_callback(f"Sending sequence {ID} to caculate feature descriptors...")
             aa_no= PyPretreatPro.ProteinCheck(sequence1)
             protein_class = Pyprotein.PyProtein(sequence1)
             descriptor1 = protein_class.GetCTD()
             descriptor2 = protein_class.GetGearyAuto()
             descriptor3 = protein_class.GetMoranAuto()
             descriptor4 = protein_class.GetMoreauBrotoAuto()
+            completed_steps += 1
+            progress=int((completed_steps / total_steps) * 100)
+            progress_callback("Step 5: Physicochemical Analysis completed", 5)
             
             #df1 = pd.DataFrame.from_dict(descriptor1)
             df1 = pd.DataFrame.from_dict(descriptor1,orient='index').transpose()
@@ -152,49 +167,19 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
             con1 = pd.concat(df_all, axis="columns")
             MERGED_DATAFRAMES.append(con1)
 
-            #Raw Results files
-            progress_callback(f"Creating DataSet...")
-            """
-            #i: Physiochemical csv
-            column_names_i = ['Protein_ID','aa_no','molecular_weight', 'pH_charge', 'isoelectric point', 'Hydropathy_gravy', 'instability_index', 'aromaticity']
-            physiochemical_data = [ID, aa_no, scale1, scale2, scale3, scale4, scale5, scale6]
-            df_physiochemical = pd.DataFrame(data=[physiochemical_data], columns=column_names_i)
-            df_physiochemical.to_csv('E:/ASAB/VacSol-AI/VacSol-ML-ESKAPE-/physiochemical_analysis.csv', index=False)
-
-            #ii: Epitope_analysis csv
-            column_names_ii = ['Protein_ID', 'b_cells_probability_score', 'mhci_probability_score', 'mhci_rank', 'mhcii_rank', 'mhcii_comblib_score', 'mhcii_comblib_rank', 'mhcii_smm_align_ic50', 'mhcii_smm_align_rank', 'mhcii_nn_align_ic50', 'mhcii_nn_align_rank']
-            epitope_data = [ID, df_bcells_final, df_score_mhci, df_rank_mhci, rank_mhcii, comblib_score_mhcii, comblib_rank_mhcii, smm_align_ic50_mhcii, smm_align_rank_mhcii, nn_align_ic50_mhcii, nn_align_rank_mhcii]
-            df_epitope = pd.DataFrame(data=[epitope_data], columns=column_names_ii)
-            df_epitope.to_csv('E:/ASAB/VacSol-AI/VacSol-ML-ESKAPE-/epitope_analysis.csv', index=False)
-
-            #iii: adhesion_probability
-            column_names_iii = ['Protein_ID', 'surface_probability']
-            adhesion_data = [ID, df_sprob_final]
-            df = pd.DataFrame(data=[adhesion_data], columns=column_names_iii)
-            df_adhesion = pd.DataFrame(data=[adhesion_data], columns=column_names_iii)
-            df_adhesion.to_csv('E:/ASAB/VacSol-AI/VacSol-ML-ESKAPE-/adhesion_analysis.csv', index=False)
-
-            #iv: antigenicity
-            column_names_iv = ['Protein_ID','antigenicity_1']
-            antigenicity_data = [ID, antigenicity_1_final]
-            df = pd.DataFrame(data=[antigenicity_data], columns=column_names_iv)
-            df_antigenicity = pd.DataFrame(data=[antigenicity_data], columns=column_names_iv)
-            df_antigenicity.to_csv('E:/ASAB/VacSol-AI/VacSol-ML-ESKAPE-/antigenicity_analysis.csv', index=False)
-            """
-
     con = pd.concat(list_data).reset_index()
     print(con)
 
     # concatenate the script directory with the filename to create the full path of the CSV file
     script_dir = sys.path[0]
     final_csv_path = os.path.join(script_dir, "FINAL.csv")
-
+    completed_steps += 1
 
     con.to_csv(final_csv_path, index=False)
 
     #prediction of signal peptides (SignalP. version 6.0)
     # get the path of the directory where the script is located
-    script_dir = sys.path[0]
+    script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # concatenate the script directory with the filename to create the full path of the FASTA file
     fasta_file_path = os.path.join(script_dir, "sequences.fasta")
@@ -208,9 +193,7 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
     #prediction of signal peptides (SignalP. version 6.0)
     os.system(f'signalp6 --fastafile {fasta_file_path} --organism other --output_dir {output_dir_path}')
 
-    #read signalp results:
-    progress_callback(f"Sending sequence {ID} to Signal Peptide Predictions...")
-    
+    #read signalp results:    
     sp_table_path = os.path.join(csv_folder_path, "prediction_results.txt")
     df = pd.read_table(sp_table_path, sep="\t", header=None, skiprows=1)
     df.columns = ["ID", "Prediction", "OTHER", "SP(Sec/SPI)", "LIPO(Sec/SPII)", "TAT(Tat/SPI)", "TATLIPO(Sec/SPII)", "PILIN(Sec/SPIII)", "CS Position"]
@@ -227,7 +210,9 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
     PILIN = df['PILIN(Sec/SPIII)'].values
     OTHER = df['OTHER'].values
     
-    progress_callback(f"Creating DataSet...")
+    completed_steps += 1
+    progress=int((completed_steps / total_steps) * 100)
+    progress_callback("Step 6: Signal Peptide Analysis Completed", 6)
     add_scores = pd.read_csv(final_csv_path)
     add_scores["signal_peptide_SP"] = SP
     add_scores["signal_peptide_LIPO"] = LIPO
@@ -237,6 +222,9 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
     add_scores["signal_peptide_OTHER"] = OTHER
 
     MERGED = pd.concat(MERGED_DATAFRAMES).reset_index()
+    completed_steps += 1
+    progress=int((completed_steps / total_steps) * 100)
+    progress_callback("Step 7: Creating Dataset", 7)
 
     data_CSV = [add_scores, MERGED]
     final_con = pd.concat(data_CSV, axis="columns").reset_index()
@@ -260,12 +248,14 @@ def calculate_features(file_path, progress_callback, run_analysis=False):
     # concatenate the script directory with the filename to create the full path of the CSV file
     scaled_csv_path = os.path.join(script_dir, "Rescaled_CSV.csv")
     final_df.to_csv(scaled_csv_path, index=False)
-    progress_callback(f"Features calculated successfully!")
-
+    completed_steps += 1
+    progress=int((completed_steps / total_steps) * 100)
+    progress_callback("Step 8: Dataset Created Successfully", 8)
+    
 def upload_sequence(request):
     if request.method == "POST":
         sequence = request.POST.get("sequence")
-        sequence = sequence.replace("\n", "")
+        #sequence = sequence.replace("\n", "")
         file = request.FILES.get("file")
 
         try:
@@ -282,14 +272,63 @@ def upload_sequence(request):
                     for chunk in file.chunks():
                         f.write(chunk)
 
+            calculate_features(file_path, progress_callback)
+            
+
         except Exception as e:
             print(f"Error analyzing sequence: {e}")
             return JsonResponse({"status": "Error analyzing sequence"}, status=500)
 
         return redirect("results")
+    
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    log_file_path = os.path.join(script_dir, "vacsol_ai.log")
+    file_handler = logging.FileHandler(log_file_path)
+    file_handler.setLevel(logging.INFO)
+    formatter = ProgressBarFormatter('%(message)s')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
-    return render(request, "upload.html")
+    with open(log_file_path, 'r') as log_file:
+        logs = log_file.readlines()
 
+    # Clear the log file after reading the messages
+    with open(log_file_path, 'w') as log_file:
+        log_file.truncate(0)
+
+    return render(request, 'upload.html', {'logs': logs})
+
+class ProgressBarFormatter(logging.Formatter):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.completed_steps = 0
+        self.total_steps = 8
+        self.progress_bar_added = True
+
+    def format(self, record):
+        # Check if the log message contains progress information
+        if hasattr(record, 'progress'):
+            self.completed_steps = record.progress
+
+        # Calculate progress percentage
+        progress = int((self.completed_steps / self.total_steps) * 100)
+
+        # Create the progress bar string
+        progress_bar = f"[{'#' * (progress // 8)}{'-' * ((100 - progress) // 8)}] {progress}%"
+
+        # Check if the progress bar has already been added
+        if not self.progress_bar_added:
+            # Modify the log message to include the progress bar
+            record.msg = f"{progress_bar}\n{record.msg}"
+            self.progress_bar_added = True
+        else:
+            # Remove the progress bar from subsequent log messages
+            record.msg = f"\n{record.msg}"
+
+        return super().format(record)
+    
 
 def get_results(request):
     try:
@@ -318,22 +357,3 @@ def get_results(request):
     except Exception as e:
         print(f"Error analyzing sequence: {e}")
         return JsonResponse({"status": "Error analyzing sequence"}, status=500)
-        
-    
-def complete_analysis_view(request):
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    directory_path = os.path.join(settings.MEDIA_ROOT, script_dir, "Analysis_Results")  # Set the path to your directory
-
-    # Ensure the directory path is valid
-    if os.path.exists(directory_path) and os.path.isdir(directory_path):
-        # Delete all files in the directory
-        for file_name in os.listdir(directory_path):
-            file_path = os.path.join(directory_path, file_name)
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-
-        return HttpResponse("Analysis completed. All files deleted.")
-    else:
-        return HttpResponse("Invalid directory path.")
-
-
