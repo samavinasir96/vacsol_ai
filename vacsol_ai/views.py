@@ -96,21 +96,9 @@ def calculate_features(file_path, progress_callback):
             # Getting means - mhcii
             mhcii_res['score'] = pd.to_numeric(mhcii_res['score'], errors='coerce')
             mhcii_res['rank'] = pd.to_numeric(mhcii_res['rank'], errors='coerce')
-#            mhcii_res['adjusted_rank'] = pd.to_numeric(mhcii_res['adjusted_rank'], errors='coerce')
- #           mhcii_res['comblib_score'] = pd.to_numeric(mhcii_res['comblib_score'], errors='coerce')
-  #          mhcii_res['comblib_adjusted_rank'] = pd.to_numeric(mhcii_res['comblib_adjusted_rank'], errors='coerce')
-   #         mhcii_res['smm_align_adjusted_rank'] = pd.to_numeric(mhcii_res['smm_align_adjusted_rank'], errors='coerce')
-  #          mhcii_res['nn_align_ic50'] = pd.to_numeric(mhcii_res['nn_align_ic50'], errors='coerce')
-   #         mhcii_res['nn_align_adjusted_rank'] = pd.to_numeric(mhcii_res['nn_align_adjusted_rank'], errors='coerce')
 
             rank_mhcii = mhcii_res["rank"].mean()
             score_mhcii = mhcii_res["score"].mean()
- #           comblib_score_mhcii = mhcii_res['comblib_score'].mean()
- #           comblib_rank_mhcii = mhcii_res["comblib_adjusted_rank"].mean()
-  #          smm_align_ic50_mhcii = mhcii_res["smm_align_ic50"].mean()
-   #         smm_align_rank_mhcii = mhcii_res["smm_align_adjusted_rank"].mean()
-    #        nn_align_ic50_mhcii = mhcii_res["nn_align_ic50"].mean()
-     #       nn_align_rank_mhcii = mhcii_res["nn_align_adjusted_rank"].mean()
 
             # Getting means - bcells
             bcell_res['Score'] = pd.to_numeric(bcell_res['Score'], errors='coerce')
