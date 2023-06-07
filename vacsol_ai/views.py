@@ -18,8 +18,6 @@ import os
 import sys
 import logging
 
-
-
 @csrf_exempt
 def home(request):
     return render (request, 'index.html')
