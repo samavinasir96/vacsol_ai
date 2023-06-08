@@ -1,0 +1,40 @@
+{
+  "INFO": {
+    "failedjobs": 0,
+    "size": 1
+  },
+  "CSV_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\prediction_results.txt",
+  "MATURE_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\processed_entries.fasta",
+  "GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output.gff3",
+  "ZIP_FILE": "",
+  "SEQUENCES": {
+    "AAA26682.1 toxic shock syndrome toxin-1 precursor [Staphylococcus aureus]": {
+      "Name": "AAA26682.1 toxic shock syndrome toxin-1 precursor [Staphylococcus aureus]",
+      "Plot_eps": "",
+      "Plot_png": "",
+      "Plot_txt": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output_AAA26682_1_toxic_shock_syndrome_toxin_1_precursor__Staphylococcus_aureus__plot.txt",
+      "Prediction": "Signal Peptide (Sec/SPI)",
+      "Likelihood": [
+        0.001,
+        0.9981,
+        0.0003,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "Protein_types": [
+        "Other",
+        "Signal Peptide (Sec/SPI)",
+        "Lipoprotein signal peptide (Sec/SPII)",
+        "TAT signal peptide (Tat/SPI)",
+        "TAT Lipoprotein signal peptide (Tat/SPII)",
+        "Pilin-like signal peptide (Sec/SPIII)"
+      ],
+      "CS_pos": "Cleavage site between pos. 40 and 41. Probability 0.753286"
+    }
+  },
+  "FORMAT": "txt",
+  "ORG": "other",
+  "MODE": "fast",
+  "REGION_GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\region_output.gff3"
+}
