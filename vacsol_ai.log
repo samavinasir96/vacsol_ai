@@ -401,3 +401,744 @@ Step 6: Signal Peptide Analysis Completed
 Step 7: Creating Dataset
 
 Step 8: Dataset Created Successfully
+Watching for file changes with StatReloader
+
+Step 1: Sequence AAA26682.1 uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 4: Antigenicity Prediction Completed
+
+Step 5: Physicochemical Analysis completed
+
+Step 6: Signal Peptide Analysis Completed
+
+Step 7: Creating Dataset
+
+Step 8: Dataset Created Successfully
+Watching for file changes with StatReloader
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 500 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 4: Antigenicity Prediction Completed
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9220
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9220
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/051e8b2d-d925-4466-914b-65eb252b744d/module-input.bbf?partNumber=1&uploadId=_IX9ocoklVB21XOT8dBlImzbB6OwZhhuRwRksEP21qOAL04KeSKVDoAr.1IqCUJQ_z42OxRLAE3m2ESn6W2_XuOXU8xSFkiXnqMImk.D77H3k4ujwTm_wMoX4Wg5cFUI0IipvI8mqMnmOF9glxtQmJ9iAkZ0q7g.C6bx18qI_rA-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103306Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=2e32fe12652a9dc3df34573677ec63befade65174c18d8a154f4d5509d0d311c HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.150.242/v1/job/051e8b2d-d925-4466-914b-65eb252b744d/status/ HTTP/1.1" 200 1246
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.150.242/v1/job/051e8b2d-d925-4466-914b-65eb252b744d/status/ HTTP/1.1" 200 175
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/051e8b2d-d925-4466-914b-65eb252b744d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/051e8b2d-d925-4466-914b-65eb252b744d/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103321Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=8bc9be03911dc090c3d68863f7f73f7ba02d4ec183aa8080bdebbb6bb3fb6b47 HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9220
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/d46794a9-acae-4fe4-8ac9-0d463dcde54d/module-input.bbf?partNumber=1&uploadId=5gULHyyTkrH8KNwzAh7_ZI14qZrnoAURTL5BBoTiJiojxPBHPbFYeQQv8UnFDG0EUFOK.1oznnuEIn7y6rgPA2iakw5.Hiuy.dY6rz6Q8TEI8Ki.7B3P2ZtI6mtGzB9u1_FasHwqbN8NP340YJ1YALLmbvDlYt2K2KUmz.zUVPg-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103510Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=357b20713a6b99685a5942cd2354338c806a43b222806e58a655701370ef4a6b HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.150.242/v1/job/d46794a9-acae-4fe4-8ac9-0d463dcde54d/status/ HTTP/1.1" 200 1343
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/d46794a9-acae-4fe4-8ac9-0d463dcde54d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/d46794a9-acae-4fe4-8ac9-0d463dcde54d/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103522Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=fe97e1208170c312300d7bac9208c2f047aa2cb58fb0f8414ca77e3e324fcaad HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 4: Antigenicity Prediction Completed
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9220
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/9ebd3a2c-644e-4fed-bd67-60c8d4152523/module-input.bbf?partNumber=1&uploadId=JEIGn58d1yvgBTlNxRaB.b4bNZXAW3UAfuyiOw5ZaAAnoF7lja1yZaZYjp2Q8VtmN3RNRfyupGGlUohAwa828GJ.fcmQ2FW30ew_gCRCmHfBGASguas0EbzsxMmIQ3SQgeEUWGxcZVTze8CmqMj5rxSrVy7NANxjcMn4kxuvvK0-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103737Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=e3bfab9d68eb88398594efa964e1f26110fbad727565690d52516976103de1b8 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.159.193/v1/job/9ebd3a2c-644e-4fed-bd67-60c8d4152523/status/ HTTP/1.1" 200 1343
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/9ebd3a2c-644e-4fed-bd67-60c8d4152523/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/9ebd3a2c-644e-4fed-bd67-60c8d4152523/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103749Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=8b7291ba34b29f1f0d5ead7b8da17748471b93aa5d8aa32ae2a17a486899b200 HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/f8809a4b-e3a0-4079-ae97-c05c8ac06341/module-input.bbf?partNumber=1&uploadId=XLyKKNkpgSUtb65QEvhG3_8HEg2kIIxprNDvnMfaxYP_2_A6VcgxcbKJU0c5dwGRMEB04Lbn17gbxjnX3sQ.cwEqDSJVuvTmGaEvr7JqzBO8LLCmaYOyHSPvtYSrm2DPFFaGOoqcAUi_5RKN9WEUalcpCbUi9SL.imr.94F3BR4-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103927Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=5dac01baf2b2607190b0cd3ce5e958fdf168fa10c149acb0d3815c79a2d04ff7 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.159.193/v1/job/f8809a4b-e3a0-4079-ae97-c05c8ac06341/status/ HTTP/1.1" 200 1438
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/f8809a4b-e3a0-4079-ae97-c05c8ac06341/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/f8809a4b-e3a0-4079-ae97-c05c8ac06341/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T103939Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=e487306431be35a926eee774f763b16e54868aeab128f1bd1b3c823a780953c9 HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 4: Antigenicity Prediction Completed
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9220
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|A0A013RQQ6|A0A013RQQ6_ACIBA uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+Internal Server Error: /upload/
+
+
+
+
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+
+
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+
+
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+
+
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+
+
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/0760086d-ac90-4887-bfbc-c185fe2bfc11/module-input.bbf?partNumber=1&uploadId=13j34JrK3Ds8TwqJOAsVYV8sfPRS9loz4rqrbY8GIRRUjnQ2U6nRxQGw_BCK0m95j6p0xAs5dRjT562CVbhJaSf7fRHGUd4rgRyUZPAe7b7WSoa5ZSVnX7LwKz59gbY2qf7_1gknEOgzVMFs5cyV2kZAJqkS3U_jPtT9a.avpgc-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T104657Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=c06e9e0a9dd0ac92faee8331f3cb762bf802beb81cd93ba776dd8c7ab99da976 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.159.193/v1/job/0760086d-ac90-4887-bfbc-c185fe2bfc11/status/ HTTP/1.1" 200 1358
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/0760086d-ac90-4887-bfbc-c185fe2bfc11/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/0760086d-ac90-4887-bfbc-c185fe2bfc11/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T104709Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=4178dc2f6a05dcf09c63103d070cd2c88137716d60ae5fe37fb411cea68e7e8f HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+Step 4: Antigenicity Prediction Completed
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/module-input.bbf?partNumber=1&uploadId=wk3hs0PfFtW5AZwy92x0fve6PK4899PoBWrpoLZ1iUaWVdE6LlbxhNN7l0FGxDzkxhuVOHMxek6q._2R974sjgmo1ECi9jGDxLGmAnOiuzNOH.aVDP6h18Odgmr_W.OQ2vbBhO86DABSL_ylGk6qQDDJtwKrOz2AWjVFNYADeDk-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105357Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=f1401db50cfb2764179b7636c97c8caa8464c4959d55c1c2ae33e60495b53113 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.159.193/v1/job/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/status/ HTTP/1.1" 200 1438
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/1fa68cb0-7697-4ec8-a3fd-8f0fdf074d4d/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105409Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=59d31996b99f4af572b4aabbb801b66957f713a3c1cb1b66835ffcf4ae248e46 HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/module-input.bbf?partNumber=1&uploadId=ZIZwaUbLS.iC9vdFkLEbcW9faU9lgay_X3JuQw1hDDAt.1fSHPphODFgIGITNn7jCBLsFrI6HlIVxtXqIPaAUOcCGB5Vl_j54znAcFpsQRwTppgF.OXpsoe887KcgzQJycHiTFCWJRP8aTQrkO0m5dEl1VriXvSAEO65KsT7mII-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105715Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=e44d4bea28de119457d5dea74da3b40b748f3fcd58f772db835f1e7fa07a2662 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5675
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5675
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5675
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5675
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5824
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 5824
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105759Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=a91c5227275657eb1f8b4ee929186e31811fdf80c7c31883c6b6a7f26271f1a0 HTTP/1.1" 206 36
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105759Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=a91c5227275657eb1f8b4ee929186e31811fdf80c7c31883c6b6a7f26271f1a0 HTTP/1.1" 206 745
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/982ef7d9-c1e0-4f1a-a5c1-57a6ec08328f/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T105802Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=6c129ea5112cf1458719045bfc73f58d06448b64a9fdc2dd897ad860f049a8e6 HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/app/?uri=DTU%2FSignalP_6 HTTP/1.1" 200 9208
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/ HTTP/1.1" 201 5262
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/storage/input/start_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/storage/input/presigned_upload_url/?part_number=1 HTTP/1.1" 200 1767
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PUT /proxy/storage/job-storage/224ba0f2-c42a-40ee-bbea-78baa9da97f7/module-input.bbf?partNumber=1&uploadId=vfCLNw0lKjroYdj27WQ3Aa_elOy._ydDWL4m7dXgkDPNS2pA_TErkPBxPTCQCAs8Z.xhq_wPjFjoyFtL.n4gw3DwodKZAycIxZ7GOkmoMROgfUZkbV0qDF71DwlaL0bXoqrQJP4yjRPv3KiO4eARZWIi7q0nE9ubQnrkHfbAsCs-&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T110401Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=a48decfc165f9d0928e47138ceeeffe0a3fc361ba475763b9446b5ca95dfaf91 HTTP/1.1" 200 0
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/storage/input/complete_upload/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "POST /api/jobs/cloud/ HTTP/1.1" 200 126
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/ HTTP/1.1" 200 5748
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/cloud/10.222.159.193/v1/job/224ba0f2-c42a-40ee-bbea-78baa9da97f7/status/ HTTP/1.1" 200 1355
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/storage/results/download/ HTTP/1.1" 200 8041
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "PATCH /api/jobs/224ba0f2-c42a-40ee-bbea-78baa9da97f7/ HTTP/1.1" 200 2
+Starting new HTTPS connection (1): biolib.com:443
+https://biolib.com:443 "GET /proxy/storage/job-storage/224ba0f2-c42a-40ee-bbea-78baa9da97f7/module-output.bbf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2EUXNBSDDSYZEWQR%2F20230609%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230609T110413Z&X-Amz-Expires=21600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCmV1LW5vcnRoLTEiSDBGAiEAie0qvUAW%2BYHiEu2EKhJ1rAa%2FEQ1aHWzCWxoQCpJlY7MCIQDC49Xuv8opOpq3gHNVuU2CWjeoNQxi2BbPAKpjAUr9EyqRBAiH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDY5NzE3NTk2ODkwMiIMtt2IWNM3ZAqjSsuEKuUDceNHf5xWLfkDSlxOzNXaHdUx5ZSUQv%2BPwfLeTKzq3wQYcfbwW34CVLpCJa%2FHQM2oLdELTEXsGv8o9hi1N8CHKBbXHAro%2FIcMj7mQWnjA%2F154VoUktzmQC7Kyfum8ST8mj0T8iSZoXM8XiN%2F5HlMNFfLgoAhI2JOBc%2BhfEM5JXz9o4oQnIyTaBtNs8rNwYUA4vkFxZQ3FpvM9KsNdKXbXklASqGESWmFjXJTlj8XoLO27NU1cNzIi07Sood3pums1VBqk73yj0l%2FmIm4OkjgMNMoBQiIMknA3tMODCD2vm0weZn9M3pLkFDhDEiEzAGVzX7yB4d3%2BbiHJTNuvjUJUboqrhLJxI%2B5zFA%2BNTRx70SN4fsglLKzsuDN5rAp5sJdCRANdqe3SyCMxyPyVSG9ekO%2FejMGj63CKAARtUUHDHVBu7Pg0ifSeirNOVwPm2JT111sWKQHk%2B1BZXpauC3sMaxPUThjaWfVCti7il595q3IMTu2IiRl70iK%2F%2FRCpCbL26yzKgQCXWgwQZ%2Be%2B7jLLe4E76FokD6R4lVWpBHcCShD4YfKY1GT%2BRzL9zOJJChu2o2gUILUD1SrkNytMh0UedAXX4dgSCWTJmClMIuUHHBsp5rqLFEPmQHWpBaXdoxT8UlcJb2Mw2vmKpAY6pAEX%2Bl4XrML44pc%2BgFRxjiYrU5J64YNF0fe75Hhj88Oz6%2FteL6tDWlEDKymSCLh68prOvB%2BdSyNdpLMWqoM8KmlCndOAYICjup3894YKUXuGL6bx7QQnCTLHLrRqn71%2BpJVIulJI8q3yy2g2IcVQbA2SLzTyIQTdKrGHEKN%2FcEhxkUa9jLS2Pn6VFMDmQorTJyvpLf232k1XwaSjKBkOxlbByRj2Fg%3D%3D&X-Amz-Signature=3d57b30c19e55457095bae46504ed2950d43a3ecc6f90ab771dc97c50f21f91f HTTP/1.1" 206 36
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+Internal Server Error: /upload/
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+
+Step 1: Sequence tr|I3U3P0|I3U3P0_ENTFD uploaded successfully
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhci/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/mhcii/ HTTP/1.1" 200 None
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 2: Epitope Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 3: Adhesion Probability Analysis Completed
+Starting new HTTP connection (1): tools-cluster-interface.iedb.org:80
+http://tools-cluster-interface.iedb.org:80 "POST /tools_api/bcell/ HTTP/1.1" 200 None
+
+
+Step 4: Antigenicity Prediction Completed
+
+
+Step 5: Physicochemical Analysis completed
+
+
+Step 6: Signal Peptide Analysis Completed
+
+
+Step 7: Creating Dataset
+
+
+Step 8: Dataset Created Successfully
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\ASAB\VacSol-AI\ESKAPE\Real_time_server\vacsol_ai\vacsol_ai\views.py changed, reloading.
+Watching for file changes with StatReloader

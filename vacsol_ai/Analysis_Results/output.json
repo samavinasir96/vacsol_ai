@@ -3,24 +3,24 @@
     "failedjobs": 0,
     "size": 1
   },
-  "CSV_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\prediction_results.txt",
-  "MATURE_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\processed_entries.fasta",
-  "GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output.gff3",
+  "CSV_FILE": "output/prediction_results.txt",
+  "MATURE_FILE": "output/processed_entries.fasta",
+  "GFF_FILE": "output/output.gff3",
   "ZIP_FILE": "",
   "SEQUENCES": {
-    "AAA26682.1 toxic shock syndrome toxin-1 precursor [Staphylococcus aureus]": {
-      "Name": "AAA26682.1 toxic shock syndrome toxin-1 precursor [Staphylococcus aureus]",
+    "tr|I3U3P0|I3U3P0_ENTFD IS66 transposase OS=Enterococcus faecium (strain ATCC BAA-472 / TX0016 / DO) OX=333849 GN=HMPREF0351_12004 PE=4 SV=1": {
+      "Name": "tr|I3U3P0|I3U3P0_ENTFD IS66 transposase OS=Enterococcus faecium (strain ATCC BAA-472 / TX0016 / DO) OX=333849 GN=HMPREF0351_12004 PE=4 SV=1",
       "Plot_eps": "",
       "Plot_png": "",
-      "Plot_txt": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\output_AAA26682_1_toxic_shock_syndrome_toxin_1_precursor__Staphylococcus_aureus__plot.txt",
-      "Prediction": "Signal Peptide (Sec/SPI)",
+      "Plot_txt": "output/output_tr_I3U3P0_I3U3P0_ENTFD_IS66_transposase_OS_Enterococcus_faecium__strain_ATCC_BAA_472___TX0016___DO__OX_333849_GN_HMPREF0351_12004_PE_4_SV_1_plot.txt",
+      "Prediction": "Other",
       "Likelihood": [
-        0.001,
-        0.9981,
-        0.0003,
-        0.0002,
-        0.0002,
-        0.0002
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "Protein_types": [
         "Other",
@@ -30,11 +30,11 @@
         "TAT Lipoprotein signal peptide (Tat/SPII)",
         "Pilin-like signal peptide (Sec/SPIII)"
       ],
-      "CS_pos": "Cleavage site between pos. 40 and 41. Probability 0.753286"
+      "CS_pos": ""
     }
   },
   "FORMAT": "txt",
   "ORG": "other",
   "MODE": "fast",
-  "REGION_GFF_FILE": "E:\\ASAB\\VacSol-AI\\ESKAPE\\Real_time_server\\vacsol_ai\\vacsol_ai\\Analysis_Results\\region_output.gff3"
+  "REGION_GFF_FILE": "output/region_output.gff3"
 }

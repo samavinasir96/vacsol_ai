@@ -1,4 +1,5 @@
 import pickle
+import subprocess
 import iedb
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from PyBioMed.PyPretreat import PyPretreatPro
@@ -17,6 +18,7 @@ import pandas as pd
 import os
 import sys
 import logging
+import biolib
 
 @csrf_exempt
 def home(request):
@@ -38,6 +40,8 @@ def calculate_features(file_path, progress_callback):
     total_steps = 8
     completed_steps = 0
     # Use os.path.abspath to get the absolute file path
+    script_dir = sys.path[0]
+    file_path = os.path.join(script_dir, "sequences.fasta")
     file_path = os.path.abspath(file_path)
     MERGED_DATAFRAMES = []
     with open(file_path) as fasta_file:
@@ -164,20 +168,10 @@ def calculate_features(file_path, progress_callback):
     con.to_csv(final_csv_path, index=False)
 
     #prediction of signal peptides (SignalP. version 6.0)
-    # get the path of the directory where the script is located
-    script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # concatenate the script directory with the filename to create the full path of the FASTA file
-    fasta_file_path = os.path.join(script_dir, "sequences.fasta")
+    csv_folder_path = os.path.join(script_dir, "biolib_results")
 
-    # create the output directory path
-    csv_folder_path = os.path.join(script_dir, "Analysis_Results")
-    os.makedirs(csv_folder_path, exist_ok=True)
-
-    output_dir_path = os.path.join(csv_folder_path)
-
-    #prediction of signal peptides (SignalP. version 6.0)
-    os.system(f'signalp6 --fastafile {fasta_file_path} --organism other --output_dir {output_dir_path}')
+    subprocess.run('biolib run DTU/SignalP_6 --fastafile vacsol_ai/sequences.fasta --output_dir output')
 
     #read signalp results:    
     sp_table_path = os.path.join(csv_folder_path, "prediction_results.txt")
@@ -187,7 +181,6 @@ def calculate_features(file_path, progress_callback):
 
     #df.to_csv('E:/ASAB/VacSol-AI/VacSol-ML-ESKAPE-/signal_peptide_analysis.csv', index=False)
     
-
     #extract the scores
     SP = df['SP(Sec/SPI)'].values
     LIPO = df['LIPO(Sec/SPII)'].values
