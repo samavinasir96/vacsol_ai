@@ -1,0 +1,40 @@
+{
+  "INFO": {
+    "failedjobs": 0,
+    "size": 1
+  },
+  "CSV_FILE": "output/prediction_results.txt",
+  "MATURE_FILE": "output/processed_entries.fasta",
+  "GFF_FILE": "output/output.gff3",
+  "ZIP_FILE": "",
+  "SEQUENCES": {
+    "ABO13392.1 putative phospholipase D protein [Acinetobacter baumannii ATCC 17978]": {
+      "Name": "ABO13392.1 putative phospholipase D protein [Acinetobacter baumannii ATCC 17978]",
+      "Plot_eps": "",
+      "Plot_png": "",
+      "Plot_txt": "output/output_ABO13392_1_putative_phospholipase_D_protein__Acinetobacter_baumannii_ATCC_17978__plot.txt",
+      "Prediction": "Other",
+      "Likelihood": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Protein_types": [
+        "Other",
+        "Signal Peptide (Sec/SPI)",
+        "Lipoprotein signal peptide (Sec/SPII)",
+        "TAT signal peptide (Tat/SPI)",
+        "TAT Lipoprotein signal peptide (Tat/SPII)",
+        "Pilin-like signal peptide (Sec/SPIII)"
+      ],
+      "CS_pos": ""
+    }
+  },
+  "FORMAT": "txt",
+  "ORG": "other",
+  "MODE": "fast",
+  "REGION_GFF_FILE": "output/region_output.gff3"
+}

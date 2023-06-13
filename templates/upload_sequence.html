@@ -5,7 +5,7 @@
 <style>
     h3{
     padding-top: 2%;
-    margin-left: 6%;
+    margin-left: 4%;
     font-family: Calibri;
     font-size: 14px;
     font-weight: 900;
@@ -22,6 +22,11 @@ textarea{
 }
 h2{
     margin-left: 150px;
+}
+h4{
+    margin-left: 45px;
+    margin-top: -2%;
+    font-family: Calibri;
 }
 form {
     margin-left: 1%;
@@ -47,7 +52,7 @@ button{
     border: none;
     background-color: #091E34;
     color: #ffff;
-    margin-left: 50%;
+    margin-left: 55%;
 }
 .container {
     display: flex;
@@ -62,7 +67,7 @@ button{
     width: 480px;
     height: 410px;
     margin-right: 15px;
-    margin-top: -1.5%;
+    margin-top: -4.5%;
 }
 
 #log-messages {
@@ -76,6 +81,37 @@ button{
     font-size: 12px;
     font-weight: 500;
 }
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar-container {
+    position: relative;
+    width: 600px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: -7%;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: blue;
+    animation: progress-animation 2s linear infinite;
+    margin-right: 15px;
+}
+
+@keyframes progress-animation {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
 </style>
 
 <body>
@@ -84,20 +120,11 @@ button{
     <form method="post" enctype="multipart/form-data" id="upload-form">
         {% csrf_token %}
         <div class="container">
-            <div class="form-content">
-                <label style="margin-left: 9%;" for="specie_select">Select the pathogen:</label>
-                <select name="category" id="category">
-                    <option value="option1">Enterococcus faecium</option>
-                    <option value="option2">Staphylococcus aureus</option>
-                    <option value="option3">Klebsiella pneumoniae</option>
-                    <option value="option3">Acinetobacter baumannii</option>
-                    <option value="option3">Pseudomonas aeruginosa</option>
-                    <option value="option3">Enterobacter spp</option>
-                </select><br><br>
-    
+            <div class="form-content">    
                 <div class="textarea">
                     <textarea name="sequence" rows="8" cols="90"></textarea><br><br>
                 </div>
+                <h4 style="color: red;">Remove any Special Characters from the Fasta Identifier like '|', '_' etc.</h4>
     
                 <label style="margin-left: 5%;" for="file">File:</label>
                 <input type="file" name="file" id="file-input"><br><br>
@@ -105,7 +132,7 @@ button{
                 <input type="hidden" name="rendered_output" value="{{ rendered_output|safe }}">
     
                 <input style="width: 60%; height: 35px; background-color:#091E34; color: #ffff; margin-left: 50%;"
-                    type="submit" value="Analyze Sequence(s)" id="uploadbutton">
+                    type="submit" value="Analyze Sequence(s)" id="uploadbutton" onclick="activateProgressBar()">
             </div>
     
             <div class="log-container">
@@ -115,7 +142,12 @@ button{
                         {{ log }}<br>
                     {% endfor %}
                 </div>
-            </div>
+            </div>        
+        </div>
+        <div class="page-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>    
         </div>
     </form>
     <!-- <div class="container">
@@ -146,6 +178,12 @@ button{
         $(document).ready(function() {
             setInterval(getLatestLogs, 5000);
         });
+    </script>
+    <script>
+        function activateProgressBar() {
+            var progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = '100%';
+        }
     </script>
 </body>
 </html>

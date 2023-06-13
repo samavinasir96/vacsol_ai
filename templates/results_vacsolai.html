@@ -71,12 +71,10 @@
             <tr>
                 <td>{{ result.Protein_ID }}</td>
                 <td>
-                    {% if result.Prediction == -1 %}
-                        Non-vaccine target
-                    {% elif result.Prediction == 1 %}
-                        Vaccine candidate
-                    {% else %}
-                        Unknown
+                    {% if result.Prediction == 1 %}
+                        Vaccine Candidate
+                    {% elif result.Prediction == -1 %}
+                        Non_Vaccine Target
                     {% endif %}
                 </td>
             </tr>
@@ -88,11 +86,11 @@
     <form method="post" action="{% url 'download_csv' %}">
       {% csrf_token %}
       <label for="Physiochemical parameters">
-          <input type="checkbox" name="csv_files" value="physiochemical_parameters.csv"> Physiochemical parameters
+          <input type="checkbox" name="csv_files" value="physicochemical_parameters.csv"> Physiochemical parameters
           <br>
       </label><br>
-      <label for="Epitope analysis">
-          <input type="checkbox" name="csv_files" value="epitope_analysis.csv"> Epitope analysis
+      <label for="deeptmhmm">
+          <input type="checkbox" name="csv_files" value="deeptmhmm.csv"> Transmembrane Helixes
           <br>
       </label><br>
       <label for="Adhesion probability">
@@ -106,7 +104,7 @@
       <button type="submit">Download Feature File(s)</button>
   </form>
 
-  <form action="{% url 'delete_files' %}" method="post">
+  <form action="{% url 'delete_files_vacsolai' %}" method="post">
     {% csrf_token %}
     <button type="submit">Complete Analysis</button>
   </form>

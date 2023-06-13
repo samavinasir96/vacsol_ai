@@ -1,37 +1,33 @@
 {% extends './base.html' %} {% block content %}{% load static %}
 <style>
     a{
-    padding-top: 2%;
     margin: 0;
-    margin-left: 40%;
-    font-family: Fira Sans Condensed;
+    font-family: Calibri;
     font-size: medium;
     font-weight: 600;
-    text-align: justify;
+    text-align: center;
     color: rgb(0, 131, 225);
+    padding-left: 1%;
 }
 
 h3{
     padding-top: 2%;
     margin: 0;
-    font-family: Fira Sans Condensed;
+    font-family: Calibri;
     font-size: medium;
-    font-weight: 600;
+    font-weight: bolder;
     text-align: justify;
 }
 p{
-    font-family: Fira Sans Condensed;
+    font-family: Calibri;
     font-size: small;
-    font-weight: 550;
+    font-weight: bold;
     justify-content: center;   
 }
 
 a{
-    text-align: center;
     text-decoration-line: underline;
 }
-
-
 button{
     display: block;
     font-size: medium;
@@ -43,21 +39,31 @@ button{
     align-items: center;
     margin-left: 150px;
   }
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+}
 </style>
-<br />
+<br>
 <h3 style="text-align: center;"> Welcome to VacSol-AI!</h3>
 <p style="text-align: center;">VacSol-AI is ai framework for predictiong and analyzing vaccine targets using the concept of reverse vaccinology.</p>
 <p style="text-align: center;">ML based algorithms are employed in real time to find promising candidates in this program.</p>
-<br />
-<br />
+<br>
+<br>
 <base href="/">
-<p style="padding-bottom: 1px; margin-left: 42%;"><img src="{% static 'eskape.png' %}" alt="" width="180px" height="50px"></p>
-<a style="margin-left: 41%;" href="{% url 'upload' %}">Enter site for ESKAPE pathogens</a>
-<br />
-<br />
-<br />
-<p style="padding-bottom: 1px; margin-left: 42%;"><img src="{% static 'bac.png' %}" alt="" width="180px" height="50px"></p>
-<a routerLink="/bac-sequence">Enter VacSol-AI for Bacterial pathogens</a>
-<br />
+<br>
+<div class="center">
+    <p><img src="{% static 'bac.png' %}" alt="" width="180px" height="50px"></p>
+    <a href="{% url 'sequence_upload' %}">Enter site</a>
+</div>
 
+<br>
+
+<div class="center">
+    <p><img src="{% static 'eskape.png' %}" alt="" width="180px" height="50px"></p>
+    <a href="{% url 'upload' %}">For ESKAPE pathogens</a>
+</div>
 {% endblock %}

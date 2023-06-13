@@ -143,7 +143,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'E:\ASAB\VacSol-AI\ESKAPE\Real_time_server/vacsol_ai/vacsol_ai.log',
+            'filename': 'E:\ASAB\VacSol-AI\ESKAPE\Real_time_server/vacsol_ai/vacsol_ai/vacsol_ai.log',
         },
     },
     'root': {

@@ -29,6 +29,13 @@ urlpatterns = [
     path('results/',views.get_results,name='results'),
     path('calculate/', views.calculate_features, name='calculate_features'),
     path('get_latest_logs/', views.get_latest_logs, name='get_latest_logs'),
+    path('download_csv/', views.download_csv, name='download_csv'),
+    path('delete_files/', views.delete_files, name='delete_files'),
+    path('features_annotate/', views.features_annotate, name='features_annotate'),
+    path('predict_results/', views.predict_results, name='predict_results'),
+    path('sequence_upload/', views.sequence_upload, name='sequence_upload'),
+    path('delete_files_vacsolai/', views.delete_files_vacsolai, name='delete_files_vacsolai'),
+
     #path('tutorials/', views.tutorials, name='tutorials'),
     #path('faqs/', views.faqs, name='faqs'),
     #path('contact_us/', views.contact_us, name='contact_us'),
